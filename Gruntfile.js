@@ -12,6 +12,12 @@ var source = [
     './src/event.js',
 
     /**
+     * 兼容性
+     */
+    './src/_polyfill/_browser.js',
+    './src/_polyfill/innerHTML.js',
+
+    /**
      * 工具类
      */
     './src/Tools/animation.js',
@@ -40,7 +46,6 @@ var source = [
     './src/calculate/interpolate/Cardinal.js',
     './src/calculate/map.js',
     './src/calculate/transform.js',
-    './src/calculate/Coulomb\'s law.js',
 
     /**
      * 2D图形
@@ -56,8 +61,6 @@ var source = [
      * 布局
      */
     './src/layout/tree.js',
-    './src/layout/force.js',
-    './src/layout/pack.js',
     './src/layout/pie.js'
 
 ];
@@ -121,11 +124,13 @@ module.exports = function (grunt) {
                     "setInterval": true,
                     "clearInterval": true,
                     "Math": true,
+                    "SVGElement": true,
                     "HTMLCollection": true,
                     "CanvasRenderingContext2D": true,
                     "WebGLRenderingContext": true,
                     "NodeList": true,
                     "XMLHttpRequest": true,
+                    "SVGSVGElement": true,
                     "ActiveXObject": true,
                     "clay": true
                 },
